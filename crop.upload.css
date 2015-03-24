@@ -1,0 +1,321 @@
+.uploaded{
+    /*word-spacing: -1;*/
+    /*width: 328px;*/
+    height: 328px;overflow-x: hidden;
+    overflow-y: scroll;
+    border: dashed 1px transparent;
+    border-radius: 4px;
+}
+
+.dragover{
+    border-color: gray;
+    border-style: dashed;
+    background: #f5f5f5;
+}
+
+.placeholder{
+    border: dashed 1px gray !important;
+    border-radius: 4px;
+    background: #f5f5f5 !important;
+}
+
+.thumb_container{
+    border: solid 1px lightgray;
+    list-style: none;
+    display: inline-block;
+    float: left;
+    /*clear: right;*/
+    /*display: flex;*/
+    /*width: 96px;*/
+    /*height: 96px;*/
+    margin: 0 4px 4px 0 ;
+    background: #ccc url('http://materialdesignicons.com/images/grid-240.svg');
+    background-size: contain;
+}
+
+.thumb_container progress{
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    -webkit-appearance: none;
+    background: rgba(0,0,0,0.5);
+    padding: 3px;
+}
+
+.thumb_container progress::-webkit-progress-bar {
+    background: transparent;
+    border-radius: 5px;
+    padding: 1px;
+    border: solid 1px white;
+}
+.thumb_container progress::-webkit-progress-value {
+    border-radius: 50px;
+    background: white;
+}
+
+.thumb{
+    background-size: cover;
+    background-clip: border-box;
+    -webkit-background-size: cover;
+    -webkit-background-clip: border-box;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+
+.btn-upload{
+    overflow: hidden;
+    float: left;
+    position: relative;
+    background: #ccc;
+    background-size: 32px 32px;
+    margin: 0 4px 4px 0;
+    color: #666;
+    border: solid 1px lightgray;
+}
+
+.btn-upload i{
+    position: absolute;
+    top: calc(50% - 16px);
+    left: calc(50% - 16px);
+    font-size: 32px;
+
+}
+.btn-upload:hover,.btn-upload:active{
+    color: #000;
+    background-color: #adadad;
+}
+
+.btn-upload input#upload {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    background: red;
+}
+
+div.previewtransparent{
+    width: 320px;
+    height: 320px;
+    float: left;
+    background: #ccc url('http://materialdesignicons.com/images/grid-240.svg');
+}
+div.preview{
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-position: center;
+
+}
+
+body{
+    background: #ffffff;
+}
+
+
+
+
+input[type="file"]{
+    /*display: none;*/
+}
+
+
+
+
+/* Show load indicator when image is being loaded */
+.cropit-image-preview.cropit-image-loading .spinner {
+    opacity: 1;
+}
+
+/* Show move cursor when image has been loaded */
+.cropit-image-preview.cropit-image-loaded {
+    cursor: move;
+}
+
+/* Gray out zoom slider when the image cannot be zoomed */
+.cropit-image-zoom-input[disabled] {
+    opacity: .2;
+}
+
+/* Hide default file input button if you want to use a custom button */
+input.cropit-image-input {
+    visibility: hidden;
+}
+
+/* The following styles are only relevant to when background image is enabled */
+
+/* Translucent background image */
+.cropit-image-background {
+    opacity: .1;
+}
+
+/* Style the background image differently when preview area is hovered */
+.cropit-image-background.cropit-preview-hovered {
+    opacity: .2;
+}
+
+/*
+ * If the slider or anything else is covered by the background image,
+ * use non-static position on it
+ */
+input.cropit-image-zoom-input {
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: #bbb;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.cropit-image-zoom-input::-moz-range-track,.cropit-image-zoom-input::-moz-range-track {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: #eee;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    /*outline: none;*/
+    -webkit-box-shadow: 0px 1px 3px black;
+}
+.cropit-image-zoom-input::-webkit-slider-thumb:active,.cropit-image-zoom-input::-webkit-slider-thumb:active {
+    background: #bbb
+}
+.cropit-image-zoom-input::-webkit-slider-thumb,.cropit-image-zoom-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #888;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: background 0.25s;
+    -moz-transition: background 0.25s;
+    -o-transition: background 0.25s;
+    -ms-transition: background 0.25s;
+    transition: background 0.25s;
+}
+
+/* Limit the background image by adding overflow: hidden */
+#image-cropper {
+    width: 325px;
+    float: left;
+    overflow: hidden;
+}
+
+.cropit-image-preview{
+    width: 320px;
+    height: 320px;
+    border: solid 1px #cccccc;
+}
+
+#image-cropper i{
+    color: #888;
+}
+
+i.medium{
+    font-size: 24px;
+}
+
+.range-control{
+    margin: auto;
+    width: 200px;
+}
+
+#imageCropData{
+    width: 300px;
+    background: #fff;
+    font-size: 10px;
+    font-family: 'Source Code Pro', Monaco, Consolas, "Lucida Console", monospace;
+}
+
+input[type=range] {
+    display: inline-block;
+    width: 80%;
+}
+
+.thumb_container{
+    overflow: hidden;
+    position: relative;
+}
+.thumb_container .panel{
+    top: -24px;
+    position: absolute;
+    width: 100%;
+    border-radius: 0px;
+    font-size: 16px;
+}
+.thumb_container:hover .panel{
+    transition: 0.2s;
+    transition-timing-function: cubic-bezier(0,2,1,0.5);
+    top: 0px;
+}
+
+.thumb[removed="true"]{
+    opacity: 0.2;
+}
+
+.panel .mdi{
+    color: rgba(229, 229, 229, 0.75);
+    padding: 2px;
+}
+.panel .mdi:hover{
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 1px 1px 2px black;
+    background: rgba(0,0,0,0.5);
+
+}
+
+.panel .mdi:active{
+    background: rgba(255,0,0,0.5);
+}
+
+.panel{
+    background: rgba(0,0,0,0.5);
+}
+
+
+
+.panel .left{
+    display: inline-block;
+}
+
+.panel .right{
+    display: inline-block;
+    float:right;
+    clear: left;
+}
+
+
+.btn-remove .checkbox{
+    display: none;
+}
+
+.panel .checkbox:checked + label{
+    display: none;
+}
+
+.panel .checkbox:checked + .btn-confirm{
+    display: inline-block;
+}
+
+.panel .checkbox:not(:checked) ~ .btn-confirm{
+    display: none;
+}
+
+
